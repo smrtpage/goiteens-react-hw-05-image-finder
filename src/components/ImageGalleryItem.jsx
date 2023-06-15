@@ -1,9 +1,8 @@
-// eslint-disable-next-line react/prop-types
-function ImageGalleryItem({ webformatURL, id }) {
+function ImageGalleryItem({ webformatURL, openModal, largeImageURL }) {
   return (
     <div>
-      <li key={id} className="ImageGalleryItem">
-        <img src={webformatURL} alt="" className="ImageGalleryItem-image" />
+      <li onClick={() => openModal(largeImageURL)} className="ImageGalleryItem">
+        <img src={webformatURL} className="ImageGalleryItem-image" />
       </li>
     </div>
   );
